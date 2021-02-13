@@ -40,6 +40,14 @@ Before you use Cloudinary, you can directly transform and re-scale images by usi
 
 For audio files, just use the [<audio></audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) HTML5 tag, its supported by all browsers
 
+### Styling and Responsive Design
+
+To make the site mobile-compatible and also look good, use [Bootstrap-Vue](https://bootstrap-vue.org/docs/components), its already installed and all of the components are globally available.
+
+Reading on how bootstrap-vue handles layout: https://bootstrap-vue.org/docs/components/layout
+A
+
+I recommend creating [single file components](https://vuejs.org/v2/guide/single-file-components.html) in the /componets/ folder, they will automatically be registered and available your main page.
 
 ### Favicon creation
 
