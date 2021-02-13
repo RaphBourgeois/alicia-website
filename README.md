@@ -39,3 +39,10 @@ You will need to install git lfs by following the steps on this page, this is ho
 Before you use Cloudinary, you can directly transform and re-scale images by using the [Nellify LFS Transform Images](https://docs.netlify.com/large-media/transform-images/) functionality
 
 For audio files, just use the [<audio></audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) HTML5 tag, its supported by all browsers
+
+
+### Favicon creation
+
+You will want to create a favicon (the icon that appears in the browser tab) for your site.
+
+I recommend https://favicon.io/, then put the file in the /static/ folder with the name "favicon.ico", the static site generator will handle the rest.
