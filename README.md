@@ -1,5 +1,12 @@
 # alicia-website
 
+## Installation
+
+1. install git and npm
+2. git clone the repo
+3. run `npm install`
+4. to start development mode, type `npm run dev` in the terminal
+
 ## Build Setup
 
 ```bash
