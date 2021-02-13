@@ -23,6 +23,13 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Tony's notes
 
+### Dev Tools
+Use [VS Code](https://code.visualstudio.com/download)
+
+This projet is using ESLint as a linter, which will catch style issues in your code. VSCode will automatically highlight them.
+
+.editorconfig will tell VSCode the project's settings.
+
 ### LFS setup (large media)
 
 [Netlify Large Media Setup](https://docs.netlify.com/large-media/setup/)
