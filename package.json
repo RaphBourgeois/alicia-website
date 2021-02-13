@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "netlify-dev": "netlify dev",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "login": "netlify link",
+    "setup-netlify-lfs": "netlify lm:setup",
+    "install-netlify-lfs": "netlify plugins:install netlify-lm-plugin"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
@@ -15,7 +19,5 @@
     "netlify-cli": "^3.7.1",
     "nuxt": "^2.14.12"
   },
-  "devDependencies": {
-    "eslint-plugin-nuxt": "^2.0.0"
-  }
+  "devDependencies": {}
 }

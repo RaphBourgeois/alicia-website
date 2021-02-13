@@ -5,7 +5,8 @@
 1. install git and npm
 2. git clone the repo
 3. run `npm install`
-4. to start development mode, type `npm run dev` in the terminal
+4. to log into netlify, run `login`
+5. to start development mode, type `npm run netlify-dev` in the terminal
 
 ## Build Setup
 
@@ -32,8 +33,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ### Dev Tools
 Use [VS Code](https://code.visualstudio.com/download)
-
-This projet is using ESLint as a linter, which will catch style issues in your code. VSCode will automatically highlight them.
 
 .editorconfig will tell VSCode the project's settings.
 
