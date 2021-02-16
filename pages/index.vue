@@ -3,8 +3,9 @@
   <b-row>
     <b-col></b-col>
     <b-col class="bck">
+      <!-- <b-row><img src="../assets/header2.jpg"/></b-row>-->
       <b-navbar toggleable="lg" type="dark" variant="info">
-                <b-navbar-brand href="#">Alicia Queen-Bourgeois Voice Over</b-navbar-brand>
+                <b-navbar-brand href="#">Alicia QB Voice Over</b-navbar-brand>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
                 <b-collapse id="nav-collapse" is-nav>
@@ -66,7 +67,7 @@
           </b-row>
           <b-row>
             <b-col>
-              Best way to kill moles!
+              Best way to kill cats!
             </b-col>
             <b-col>
               <audio controls>
@@ -95,10 +96,9 @@
         <b-textarea
           filled
           auto-grow
-          label="Four rows"
-          rows="4"
-          row-height="30"
-          shaped
+          label="Description"
+          value="Please describe your project."
+          rows="3"
         ></b-textarea>
       </b-row>
     </b-col>
