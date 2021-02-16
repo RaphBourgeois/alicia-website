@@ -25,7 +25,7 @@
       </b-row>
       <b-row>
         <b-col>
-          Best way to kill moles!
+          Best way to kill moles! again
         </b-col>
         <b-col>
         <audio controls>
