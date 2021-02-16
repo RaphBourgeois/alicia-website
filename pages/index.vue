@@ -1,5 +1,6 @@
 <template>
   <b-container fluid>
+  <img src="../assets/header.jpg?nf_resize=fit&w=300&h=400" />
   <b-navbar toggleable="lg" type="dark" variant="info">
             <b-navbar-brand href="#">Alicia Queen-Bourgeois Voice Over</b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
