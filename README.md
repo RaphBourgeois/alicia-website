@@ -5,6 +5,7 @@
 1. install git and npm
 2. git clone the repo
 3. run `npm install`
+## ? 4. run `npm install netlify-cli -g`
 4. to log into netlify, run `login`
 5. to start development mode, type `npm run netlify-dev` in the terminal
 
