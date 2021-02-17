@@ -157,7 +157,6 @@ export default {
 }
 img {
   width: 100%;
-  min-width:350px;
   height: auto;
 }
 video {
