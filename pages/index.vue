@@ -1,8 +1,6 @@
 <template>
-  <div>
   <b-container >
     <b-row>
-      <!--<b-col></b-col>-->
       <b-col class="bck">
         <img src="../assets/header2.jpg" />
         <b-navbar toggleable="lg" type="dark" variant="info">
@@ -11,8 +9,10 @@
 
                   <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
-                      <b-nav-item href="#">Demos</b-nav-item>
-                      <b-nav-item href="#">Contact Me</b-nav-item>
+                      <b-nav-item href="#commercial">Comercial Demos</b-nav-item>
+                      <b-nav-item href="#animation">Animation Demos</b-nav-item>
+                      <b-nav-item href="#narration">Narration Demos</b-nav-item>
+                      <b-nav-item href="#contact">Contact</b-nav-item>
                     </b-navbar-nav>
                     <!-- Right aligned nav items -->
                     <b-navbar-nav class="ml-auto">
@@ -23,27 +23,20 @@
 
         <b-row>
           <b-col style="text-align: center;"><img src="../assets/background_1_0.5.jpg"/></b-col>
-          <b-col>
-            <b-row>
-              <h2 class="demoBox">Commercial Demos</h2>
-            </b-row>
-            <b-row>
-              <b-col>
-                Best way to kill moles!
-              </b-col>
+          <b-col style="text-align: center;">
+              <a id="commercial"><h2>Commercial Demos</h2></a>
               <b-col>
               <audio controls>
                 <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
               </audio>
               </b-col>
-            </b-row>
           </b-col>
         </b-row>
         <b-row>
           <b-col style="text-align: center;"><img src="../assets/background_2_0.5.jpg" /></b-col>
           <b-col style="text-align: center;">
-              <h2>Animation Demos</h2>
+              <a id="animation"><h2>Animation Demos</h2></a>
                 <audio controls>
                   <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                   Your browser does not support the audio tag.
@@ -61,30 +54,29 @@
         </b-row>
         <b-row>
           <b-col style="text-align: center;"><img src="../assets/background_3_0.5.jpg" /></b-col>
-          <b-col>
-            <b-row>
-              <h3>Narration Demos</h3>
-            </b-row>
-            <b-row>
-              <b-col>
-                Best way to kill cats!
-              </b-col>
+          <b-col style="text-align: center;">
+            
+              <a id="narration"><h2>Narration Demos</h2></a>
               <b-col>
                 <audio controls>
                   <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                   Your browser does not support the audio tag.
                 </audio>
               </b-col>
-            </b-row>
+              <video width="320" height="240" controls>
+                <source src="../assets/Making a Difference in Our World360p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            
           </b-col>
         </b-row>
-        <b-row style="justify-content: center;">
-          <video width="320" height="240" controls>
-            <source src="../assets/Making a Difference in Our World360p.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
-        </b-row>
-        <h2>Contact Me</h2>
+        
+        <b-row class="text-center" align-v="center">
+        <b-col>
+          <a id="contact"><img src="../assets/contact.png" style="width: 70%;"/></a>
+        </b-col>
+        <b-col>
+        
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group id="input-group-1">
               <b-form-input
@@ -104,18 +96,24 @@
               filled
               auto-grow
               label="Description"
+              required
               placeholder="Please describe your project."
               rows="3"
             ></b-textarea>
+            <div class="space">
             <b-button type="submit" variant="primary">Submit</b-button>
             <b-button type="reset" variant="danger">Reset</b-button>
+            </div>
           </b-form>
+          </b-col>
+          </b-row>
+          <div style="justify-content: center;text-align:center">
+          Thanks to Blabl @blabla for the graphics used in this site
+          </div>
       </b-col>
-      <!--<b-col></b-col>-->
     </b-row>
     
   </b-container>
-  </div>
 </template>
 
 <script>
@@ -151,25 +149,19 @@ export default {
 
 <style>
 
-.demoBox {
-  align-v: center;
+.space {
+  margin-top: 100 !important;
 }
-
-.test {
-
-  border: 1px solid rgba(86,61,124,1);
-}
-
-.navbar {
-   margin-left: ($spacer * .25) !important;
-}
-
 .bck {
   background-color: Rgba(125,155,155,1);
 }
 img {
   width: 100%;
-  min-width:300px;
+  min-width:350px;
+  height: auto;
+}
+video {
+  width: 90%;
   height: auto;
 }
 </style>
