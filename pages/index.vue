@@ -105,7 +105,7 @@
             </b-form>
           </b-col>
         </b-row>
-        <div style="justify-content: center;text-align:center">Thanks to Blabl @blabla for the graphics used in this site</div>
+        <div style="justify-content: center;text-align:center">Thanks to Yejin Choi for the graphics used in this site</div>
       </b-col>
     </b-row>
   </b-container>
