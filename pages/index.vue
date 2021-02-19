@@ -164,7 +164,7 @@ export default {
 
 <style>
 .navbar-custom { 
-    background-color: #1f2f1e !important; 
+    background-color: #74a6c5 !important; 
 } 
 .space {
   margin-top: 100 !important;
