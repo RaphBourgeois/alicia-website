@@ -75,7 +75,7 @@
         <b-row align-v="center" cols-md="2" cols-sm="1" cols-xs="1">
           <b-col style="text-align: center;"><a id="contact"><img src="../assets/contact.png" class="img_col" /></a></b-col>
           <b-col style="text-align: center;">
-            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+            <b-form @submit="onSubmit" v-if="show">
               <b-form-group id="input-group-1">
                 <b-form-input
                   id="input-1"
@@ -99,8 +99,7 @@
               </b-form-group>
               
               <div class="space">
-                <b-button type="submit" variant="primary">Submit</b-button>
-                <b-button type="reset" variant="danger">Reset</b-button>
+                <b-button type="submit" variant="primary">Send</b-button>
               </div>
             </b-form>
           </b-col>
@@ -130,16 +129,6 @@ export default {
         this.messages = []
         this.triggerSendMessageFunction()
       },
-      onReset(event) {
-        event.preventDefault()
-        // Reset our form values
-        resetForm()
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      },
 
       resetForm(){
         this.form.email = ''
@@ -156,7 +145,6 @@ export default {
             this.messages.push({ type: 'success', text: response })
             console.log(this.messages)
           } catch (error) {
-            alert(error)
             this.messages.push({ type: 'error', text: error })
           }
         }
