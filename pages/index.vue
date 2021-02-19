@@ -122,18 +122,40 @@ export default {
       onSubmit(event) {
         event.preventDefault()
         alert(JSON.stringify(this.form))
+        alert(JSON.stringify(this.form.email))
+        this.messages = []
+        this.triggerSendMessageFunction()
       },
       onReset(event) {
         event.preventDefault()
         // Reset our form values
-        this.form.email = ''
-        this.form.desc = ''
+        resetForm()
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
           this.show = true
         })
-      }
+      },
+
+      resetForm(){
+        this.form.email = ''
+        this.form.desc = ''
+      },
+      async triggerSendMessageFunction () {
+          try {
+            const response = await this.$axios.$post('/.netlify/functions/send-contact-email', {
+              contactName: 'horse with no name',
+              contactEmail: this.form.email,
+              message: this.form.desc
+            })
+            this.resetForm()
+            this.messages.push({ type: 'success', text: response })
+            console.log(this.messages)
+          } catch (error) {
+            alert(error)
+            this.messages.push({ type: 'error', text: error })
+          }
+        }
     }
   }
 </script>

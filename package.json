@@ -13,6 +13,7 @@
     "install-netlify-lfs": "netlify plugins:install netlify-lm-plugin"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",

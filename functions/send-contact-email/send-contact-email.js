@@ -1,5 +1,7 @@
 require('dotenv').config()
 const { MAILGUN_API_KEY, MAILGUN_DOMAIN, MAILGUN_URL, FROM_EMAIL_ADDRESS, CONTACT_TO_EMAIL_ADDRESS } = process.env
+
+console.log('MAILGUN_URL' + MAILGUN_URL);
 const mailgun = require('mailgun-js')({ apiKey: MAILGUN_API_KEY, domain: MAILGUN_DOMAIN, url: MAILGUN_URL })
 
 exports.handler = async (event) => {
@@ -13,11 +15,11 @@ exports.handler = async (event) => {
   }
 
   const mailgunData = {
-    from: FROM_EMAIL_ADDRESS,
+    from:data.contactEmail,//FROM_EMAIL_ADDRESS,
     to: CONTACT_TO_EMAIL_ADDRESS,
     'h:Reply-To': data.contactEmail,
-    subject: `New contact from ${data.contactName}`,
-    text: `Name: ${data.contactName}\nEmail: ${data.contactEmail}\nMessage: ${data.message}`
+    subject: `Inquiery from ${data.contactEmail}`,
+    text: `Email: ${data.contactEmail}\nProject Description: ${data.message}`
   }
 
   return mailgun.messages().send(mailgunData).then(() => ({
