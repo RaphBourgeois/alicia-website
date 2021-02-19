@@ -1,9 +1,9 @@
 <template>
   <b-container >
-    <b-row>
+    <b-row cols="1">
       <b-col class="bck">
-        <img src="../assets/header2.jpg" />
-        <b-navbar toggleable="lg" type="dark" variant="info">
+        <img src="../assets/header2.jpg" style="width: 100%; height: auto;"/>
+        <b-navbar toggleable="lg" type="dark" class="navbar-custom">
                   <b-navbar-brand href="#">Alicia QB Voice Over</b-navbar-brand>
                   <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -21,20 +21,22 @@
                   </b-collapse>
           </b-navbar>
 
-        <b-row>
-          <b-col style="text-align: center;"><img src="../assets/background_1_0.5.jpg"/></b-col>
+        <b-row  align-v="center">
+          <b-col style="text-align: center;"><img class="img_col" src="../assets/part1.png"/></b-col>
           <b-col style="text-align: center;">
               <a id="commercial"><h2>Commercial Demos</h2></a>
+              </br>
               <audio controls>
                 <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
               </audio>
           </b-col>
         </b-row>
-        <b-row>
-          <b-col style="text-align: center;"><img src="../assets/background_2_0.5.jpg" /></b-col>
+        <b-row align-v="center">
+          <b-col style="text-align: center;"><img class="img_col"  src="../assets/part2.png" /></b-col>
           <b-col style="text-align: center;">
               <a id="animation"><h2>Animation Demos</h2></a>
+              </br>
                 <audio controls>
                   <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                   Your browser does not support the audio tag.
@@ -50,11 +52,12 @@
           </b-col>
 
         </b-row>
-        <b-row>
-          <b-col style="text-align: center;"><img src="../assets/background_3_0.5.jpg" /></b-col>
+        <b-row align-v="center">
+          <b-col style="text-align: center;"><img class="img_col"  src="../assets/part3.png" /></b-col>
           <b-col style="text-align: center;">
             
               <a id="narration"><h2>Narration Demos</h2></a>
+              </br>
                 <audio controls>
                   <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
                   Your browser does not support the audio tag.
@@ -67,8 +70,8 @@
           </b-col>
         </b-row>
         
-        <b-row>
-          <b-col style="text-align: center;"><a id="contact"><img src="../assets/contact.png" style="width: 70%;"/></a></b-col>
+        <b-row align-v="center" cols-md="2" cols-sm="1" cols-xs="1">
+          <b-col style="text-align: center;"><a id="contact"><img src="../assets/contact.png" class="img_col" /></a></b-col>
           <b-col style="text-align: center;">
             <b-form @submit="onSubmit" @reset="onReset" v-if="show">
               <b-form-group id="input-group-1">
@@ -80,7 +83,6 @@
                   required
                 ></b-form-input>
               </b-form-group>
-
               <b-form-group id="input-group-2" >
                 <b-textarea
                 id="input-2"
@@ -90,7 +92,7 @@
                 label="Description"
                 required
                 placeholder="Please describe your project."
-                rows="3"
+                rows="4"
                 ></b-textarea>
               </b-form-group>
               
@@ -161,15 +163,17 @@ export default {
 </script>
 
 <style>
-
+.navbar-custom { 
+    background-color: #1f2f1e !important; 
+} 
 .space {
   margin-top: 100 !important;
 }
 .bck {
-  background-color: Rgba(125,155,155,1);
+  background-color: lightblue;
 }
-img {
-  width: 100%;
+.img_col {
+  width: 80%;
   min-width: 300px;
   height: auto;
 }
