@@ -1,9 +1,11 @@
 <template>
-  <b-container >
-    <b-row cols="1">
-      <b-col class="bck">
+  <b-container>
+    <b-row cols="1" class="bck">
+      <b-col>
+      <b-row>
         <img src="../assets/header2.jpg" style="width: 100%; height: auto;"/>
-        <b-navbar toggleable="lg" type="dark" class="navbar-custom">
+      </b-row>
+        <b-navbar toggleable="lg" type="dark" class="navbar-custom"  style="margin-left: -15px;margin-right: -15px;">
                   <b-navbar-brand href="#">Alicia QB Voice Over</b-navbar-brand>
                   <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -163,6 +165,15 @@ export default {
 </script>
 
 <style>
+.row-compact {
+  margin-left: 0;
+  margin-right: 0;
+  > [class^="col"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .navbar-custom { 
     background-color: #74a6c5 !important; 
 } 
