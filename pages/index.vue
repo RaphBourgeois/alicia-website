@@ -124,8 +124,6 @@ export default {
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert(JSON.stringify(this.form))
-        alert(JSON.stringify(this.form.email))
         this.messages = []
         this.triggerSendMessageFunction()
       },
@@ -143,7 +141,6 @@ export default {
             })
             this.resetForm()
             this.messages.push({ type: 'success', text: response })
-            console.log(this.messages)
           } catch (error) {
             this.messages.push({ type: 'error', text: error })
           }
