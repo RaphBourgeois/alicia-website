@@ -3,7 +3,7 @@
     <b-row cols="1" class="bck">
       <b-col>
       <b-row>
-        <img src="../assets/header2.jpg" style="width: 100%; height: auto;"/>
+        <img src="../assets/header2.jpg" style="width: 100%; height: 38%;"/>
       </b-row>
         <b-navbar toggleable="lg" type="dark" class="navbar-custom"  style="margin-left: -15px;margin-right: -15px;">
                   <b-navbar-brand href="#">Alicia QB Voice Over</b-navbar-brand>
