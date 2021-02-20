@@ -3,9 +3,9 @@
     <b-row cols="1" class="bck">
       <b-col>
       <b-row>
-        <img src="../assets/header2.jpg" style="width: 100%; height: 38%;"/>
+        <img src="../assets/header3.jpg" style="width: 100%; height: 38%;"/>
       </b-row>
-        <b-navbar toggleable="lg" type="dark" class="navbar-custom"  style="margin-left: -15px;margin-right: -15px;">
+        <b-navbar toggleable="lg" type="dark" class="navbar-custom" >
                   <b-navbar-brand href="#">Alicia QB Voice Over</b-navbar-brand>
                   <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -73,7 +73,7 @@
         </b-row>
         
         <b-row align-v="center" cols-md="2" cols-sm="1" cols-xs="1">
-          <b-col style="text-align: center;"><a id="contact"><img src="../assets/contact.png" class="img_col" /></a></b-col>
+          <b-col style="text-align: center;"><a id="contact"><img src="../assets/contact_red.png" class="img_col" /></a></b-col>
           <b-col style="text-align: center;">
             <b-form @submit="onSubmit" v-if="show">
               <b-form-group id="input-group-1">
@@ -150,17 +150,16 @@ export default {
 </script>
 
 <style>
-.row-compact {
-  margin-left: 0;
-  margin-right: 0;
-  > [class^="col"] {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
+.nav-link {
+    color: hsl(0deg 0% 100%) !important;
 }
 
+
 .navbar-custom { 
-    background-color: #74a6c5 !important; 
+    background-color: #74a6c5 !important;
+    margin-left: -15px;
+    margin-right: -15px;
 } 
 .space {
   margin-top: 100 !important;
